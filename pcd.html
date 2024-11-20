@@ -1,0 +1,104 @@
+<html>
+<head>
+    <title>Calculadora de Tempo</title>
+    <meta charset="utf-8">
+</head>
+
+<style>
+body {
+    background-color: beige;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    
+}
+
+h1{
+    color:brown;
+}
+
+#v1, #v2, #v3, #v4, #v5, #v6, #v7, #v8, #res {
+    width: 300px;
+    height: 30px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+button {
+    width: 200px;
+    height: 30px;
+    background-color: brown;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 10px;
+}
+
+figure img{
+ 
+ width:300px;
+ 
+}
+</style>
+
+<body>
+    <center>
+
+        <figure>
+            <img src="logo.png"/>
+        </figure>
+    <h1>PCD</h1><br>
+
+    <script>
+        const tempo = 24;
+
+        document.write('<div style="font-size: 20px; text-align: center;">');
+        document.write("Horas do dia: " + tempo + "<br><br>");
+        document.write('<div>');
+
+        function calcular() {
+            const v1 = parseFloat(document.getElementById('v1').value) || 0;
+            const v2 = parseFloat(document.getElementById('v2').value) || 0;
+            const v3 = parseFloat(document.getElementById('v3').value) || 0;
+            const v4 = parseFloat(document.getElementById('v4').value) || 0;
+            const v5 = parseFloat(document.getElementById('v5').value) || 0;
+            const v6 = parseFloat(document.getElementById('v6').value) || 0;
+            const v7 = parseFloat(document.getElementById('v7').value) || 0;
+            const v8 = parseFloat(document.getElementById('v8').value) || 0;
+
+            const resultado3 = tempo - v1 - v2 - v3 - v4 - v5 - v6 -v7;
+            localStorage.setItem("resultado3", resultado3);
+
+            // Usando document.write para mostrar o resultado
+            document.write("img src="logo.png");
+            document.write('<div style="font-size: 40px; font-family:arial; color:brown; width:100%; height:100%; text-align: center;  background-size: 100%; background-position: center; ">');
+            document.write("<br> <br> Horas do dia = " + tempo+  "h <br>");
+            document.write("Horas do dia atualmente = " + resultado3 +  "h <br>");
+            document.write('</div>');
+
+            function redirecionar() {
+            window.location.href = "final.html"; // Página seguinte
+        }
+
+        // Redirecionar após 5 segundos (5000 milissegundos)
+        setTimeout(redirecionar, 5000);
+            
+        }
+    </script>
+
+    <form onsubmit="return false;"> <!-- Previne o envio do formulário -->
+        <input type="text" id="v1" placeholder="Dormir"><br><br>
+        <input type="text" id="v2" placeholder="Estudar"><br><br>
+        <input type="text" id="v3" placeholder="Comer"><br><br>
+        <input type="text" id="v4" placeholder="Trabalhar"><br><br>
+        <input type="text" id="v5" placeholder="Compromissos"><br><br>
+        <input type="text" id="v6" placeholder="Tarefas de casa"><br><br>
+        <input type="text" id="v7" placeholder="Exercícios"><br><br>
+        <input type="text" id="v8" placeholder="Lazer"><br><br>
+
+        
+        <button onclick="calcular()">Valor do tempo</button><br><br>
+    </form>
+
+    
+    </center>
+</body>
+</html>

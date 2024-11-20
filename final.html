@@ -1,0 +1,81 @@
+<html>
+
+<head>
+
+    <title> Calculadora de Tempo </title>
+
+</head>
+
+<style>
+
+body{
+
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: beige;
+    
+}
+
+h1{
+    text-align:center;
+    margin-top:50px;
+    font-size:50px;
+    color:brown;
+}
+
+button{
+
+    background-color: brown;
+    width:150px;
+    font-size: 20px;;
+    color: #fff;
+    border-radius: 10px;;
+    margin-top:5px;
+    margin-left:180px;
+}
+
+#content2 {
+    width:500px;
+    margin-top:50px;
+    text-align:justify;
+ }
+
+ #content2 p{
+
+    font-size: 20px;;
+ }
+
+ figure img{
+ 
+ width:300px;
+ 
+}
+
+</style>
+
+<body>
+<center>
+    <figure>
+        <img src="logo.png"/>
+    </figure>
+
+    <h1> Relatório final </h1>
+
+    <div id="content2">
+    
+        <script>
+            // Recuperando o valor do localStorage
+            var resultadorecuperado = localStorage.getItem("resultado");
+            var resultadorecuperado2 = localStorage.getItem("resultado2");
+            var resultadorecuperado3 = localStorage.getItem("resultado3");
+        
+            // Usando a variável recuperada e exibindo com aumento de font
+            
+            document.write("<p style='font-size: 20px; text-align:center;'>Horas antigamente: " + resultadorecuperado + "h </p>");
+            document.write("<p style='font-size: 20px; text-align:center;'>Horas atualmente: " + resultadorecuperado2 + "h </p>");
+            document.write("<p style='font-size: 20px; text-align:center;'>Horas PCD: " + resultadorecuperado3 + "h </p>");
+        </script>
+
+    </div>
+</center>
+</body>
+</html>    
